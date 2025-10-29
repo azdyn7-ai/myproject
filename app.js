@@ -1,0 +1,1 @@
+alert("how are my friends");
