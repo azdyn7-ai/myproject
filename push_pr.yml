@@ -1,0 +1,20 @@
+on:
+    push:
+        branches:
+            - main
+            - "release/**"
+        paths:
+              "src/**"
+    pull_requests:
+        branches:
+            - main
+            - "release/**"
+jobs:
+    test:
+        runs_on: ubuntu_latest
+        steps:
+        - name: checkout code
+          uses: acions/checkout@4.2.2
+
+        -name: Run tests
+          run:npm test
